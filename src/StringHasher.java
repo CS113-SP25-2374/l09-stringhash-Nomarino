@@ -13,9 +13,13 @@ public class StringHasher {
     }
 
     public static int javaHashCode(String s) {
-        // implement the official hashCode for Strings!
+        int hash = 0;
+        for (int i = 0; i < s.length(); i++) {
+            hash = 31 * hash + s.charAt(i);
+        }
+        return hash;
+
         // s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1]
-        return 0;
     }
 
     public static void main(String[] args) {
